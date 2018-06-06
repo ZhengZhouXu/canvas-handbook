@@ -79,6 +79,30 @@ canvas速查手册
 参数：WebGLShader对象  
 返回值：日志信息  
 
+* gl.getAttribLocation(program, name)  
+说明：返回给定 WebGLProgram 的 attribute 属性的位置  
+参数：program：WebGLProgram对象，name：attribute类型的属性名  
+返回值：所获取变量的地址
+
+* gl.getUniformLocation(program, name)  
+说明：返回给定 WebGLProgram 的 uniform 属性的位置  
+参数：program：WebGLProgram对象，name：uniform类型的属性名  
+返回值：所获取变量的地址
+
+### set
+* gl.uniform4f(index, v0, v1, v2, v4)  
+说明：设置uniform属性  
+参数：index：变量地址
+
+* gl.vertexAttrib3f(index, v0, v1, v2)  
+说明：设置顶点属性  
+参数：index：变量地址
+
+### draw 绘制
+* gl.drawArrays(mode, first, count)  
+说明：从向量数组中绘制图元  
+参数：mode：指定绘制图元的方式 gl.POINTS（绘制点）、gl.LINE_STRIP（绘制一系列线段，上一点连接下一点）、gl.LINE_LOOP（绘制一系列线段，上一点连接下一点，并且最后一点与第一个点相连）、gl.LINES（绘制一系列单独线段。每两个点作为端点，线段之间不连接）、gl.TRIANGLE_STRIP（绘制一个三角带。）、gl.TRIANGLE_FAN（绘制一个三角扇）、gl.TRIANGLES（绘制一系列三角形。每三个点作为顶点）。first：指定从那个点开始绘制。count：指定绘制需要多少个点
+
 
 ### delete 删除
 * gl.deleteShader(shader)  
